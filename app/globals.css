@@ -1,0 +1,53 @@
+@import '@fontsource/cormorant-garamond';
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --gold: #C8A46B;
+  --black: #0A0A0A;
+  --cream: #F5F1EA;
+  --background: #F8FAFC;
+  --foreground: #111827;
+  --primary: #1E88E5;
+  --primary-light: #42A5F5;
+  --primary-dark: #1565C0;
+  --secondary: #26C6DA;
+  --accent: #66BB6A;
+  --border: #E2E8F0;
+  --input-bg: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: #0F172A;
+  --foreground: #F1F5F9;
+  --primary: #42A5F5;
+  --primary-light: #64B5F6;
+  --primary-dark: #1E88E5;
+  --secondary: #26C6DA;
+  --accent: #66BB6A;
+  --border: #334155;
+  --input-bg: #1E293B;
+  --card-bg: #1E293B;
+}
+
+@layer base {
+  * {
+    @apply border-current outline-offset-0;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+  
+  .dark body {
+    @apply bg-slate-950 text-slate-50;
+  }
+}
